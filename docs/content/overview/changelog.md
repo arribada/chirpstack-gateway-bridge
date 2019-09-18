@@ -10,6 +10,13 @@ description: Lists the changes per LoRa Gateway Bridge release, including steps 
 
 # Changelog
 
+## v3.2.1
+
+### Bugfixes
+
+* Fix NetID 3 & 4 filter according to the [errata](https://lora-alliance.org/resource-hub/nwkid-length-fix-type-3-and-type-4-netids-errata-lorawan-backend-10-specification) published by the LoRa Alliance.
+* Fix Basic Station bandwidth for LoRa Std channel (from kHz to Hz). ([#130](https://github.com/brocaar/lora-gateway-bridge/pull/130))
+
 ## v3.2.0
 
 ### Features
@@ -25,6 +32,12 @@ to save on bandwidth usage (e.g. when the gateway is using a cellular backhaul).
 This feature makes it possible to execute commands on the gateway (when the
 LoRa Gateway Bridge is running on the gateway). Note: commands must be
 pre-configured in the LoRa Gateway Bridge configuration file.
+
+### Improvements
+
+#### Basic Station backend
+
+* Verify Common Name when using client certificates. ([#129](https://github.com/brocaar/lora-gateway-bridge/pull/129))
 
 ## v3.1.0
 
