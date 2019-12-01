@@ -20,9 +20,9 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/lora-gateway-bridge/internal/backend/basicstation/structs"
-	"github.com/brocaar/lora-gateway-bridge/internal/config"
-	"github.com/brocaar/loraserver/api/gw"
+	"github.com/brocaar/chirpstack-gateway-bridge/internal/backend/basicstation/structs"
+	"github.com/brocaar/chirpstack-gateway-bridge/internal/config"
+	"github.com/brocaar/chirpstack-api/go/gw"
 	"github.com/brocaar/lorawan"
 	"github.com/brocaar/lorawan/band"
 )

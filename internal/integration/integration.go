@@ -5,9 +5,9 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"
 
-	"github.com/brocaar/lora-gateway-bridge/internal/config"
-	"github.com/brocaar/lora-gateway-bridge/internal/integration/mqtt"
-	"github.com/brocaar/loraserver/api/gw"
+	"github.com/brocaar/chirpstack-gateway-bridge/internal/config"
+	"github.com/brocaar/chirpstack-gateway-bridge/internal/integration/mqtt"
+	"github.com/brocaar/chirpstack-api/go/gw"
 	"github.com/brocaar/lorawan"
 )
 

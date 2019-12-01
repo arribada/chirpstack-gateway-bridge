@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/brocaar/loraserver/api/gw"
+	"github.com/brocaar/chirpstack-api/go/gw"
 	"github.com/gofrs/uuid"
 
 	paho "github.com/eclipse/paho.mqtt.golang"
@@ -13,7 +13,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/brocaar/lora-gateway-bridge/internal/config"
+	"github.com/brocaar/chirpstack-gateway-bridge/internal/config"
 	"github.com/brocaar/lorawan"
 )
 
@@ -57,7 +57,7 @@ func (ts *MQTTBackendTestSuite) SetupSuite() {
 	conf.Integration.MQTT.EventTopicTemplate = "gateway/{{ .GatewayID }}/event/{{ .EventType }}"
 	conf.Integration.MQTT.CommandTopicTemplate = "gateway/{{ .GatewayID }}/command/#"
 	conf.Integration.MQTT.Auth.Type = "generic"
-	conf.Integration.MQTT.Auth.Generic.Server = server
+	conf.Integration.MQTT.Auth.Generic.Servers = []string{server}
 	conf.Integration.MQTT.Auth.Generic.Username = username
 	conf.Integration.MQTT.Auth.Generic.Password = password
 	conf.Integration.MQTT.Auth.Generic.CleanSession = true
